@@ -1,0 +1,16 @@
+;
+; BIND data file for local loopback interface
+ORIGIN laurent-ferrin.local.
+$TTL    1h
+@       IN      SOA    debian.laurent-ferrin.local admin.localhost (
+                         2019100101     ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      debian.laurent-ferrin.local.
+smtp    IN      CNAME       mail
+pop     IN      CNAME       mail
+imap    IN      CNAME       mail
+mail	IN	MX	0	mail
